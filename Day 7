@@ -1,0 +1,32 @@
+Linux Process Validation
+
+kernel-space - PID=1
+user-space - PID=2
+RUID (Real user ID)
+  user can kill and send signals to a process
+EUID
+  allows anyone with permissions to fuck with processes
+
+
+systemd - systemctl
+systemctl list-units
+systemctl stop <servicename>.service
+
+
+JOBS CONTROL
+
+jobs 
+kill -9 %<jobID>
+
+
+CRON JOBS
+/proc
+/etc/crontab \\ /etc/cron.d - system level cron jobs
+/var/spool/cron - user level cron jobs
+******************^^^ if you see a file in these locations, CAT IT ****************
+
+sudo lsof
+sudo lsof -c <name>
+
+
+sudo netstat -ltup
